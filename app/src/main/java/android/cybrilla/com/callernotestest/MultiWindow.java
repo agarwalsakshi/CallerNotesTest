@@ -17,8 +17,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -40,12 +40,12 @@ public class MultiWindow extends StandOutWindow {
 
     @Override
     public String getAppName() {
-        return "MultiWindow";
+        return "Caller Notes";
     }
 
     @Override
     public int getAppIcon() {
-        return android.R.drawable.ic_menu_add;
+        return R.drawable.phone;
     }
 
     @Override
@@ -58,22 +58,16 @@ public class MultiWindow extends StandOutWindow {
         // create a new layout from body.xml
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.body, frame, true);
+        EditText notesText = (EditText) view.findViewById(R.id.notes);
 
-//        TextView idText = (TextView) view.findViewById(R.id.id);
-//        idText.setText(String.valueOf(id));
     }
 
-    // every window is initially same size
     @Override
     public StandOutLayoutParams getParams(int id, Window window) {
-        return new StandOutLayoutParams(id, 400, 300,
+        return new StandOutLayoutParams(id, 450, 300,
                 StandOutLayoutParams.CENTER,
                 StandOutLayoutParams.CENTER, 100, 100);
     }
-
-    // we want the system window decorations, we want to drag the body, we want
-    // the ability to hide windows, and we want to tap the window to bring to
-    // front
     @Override
     public int getFlags(int id) {
         return StandOutFlags.FLAG_DECORATION_SYSTEM
@@ -94,7 +88,6 @@ public class MultiWindow extends StandOutWindow {
         return "Click to add a new " + getAppName();
     }
 
-    // return an Intent that creates a new MultiWindow
     @Override
     public Intent getPersistentNotificationIntent(int id) {
         return StandOutWindow.getShowIntent(this, getClass(), getUniqueId());

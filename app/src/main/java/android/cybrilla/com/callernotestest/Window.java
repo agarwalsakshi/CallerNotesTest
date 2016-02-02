@@ -7,8 +7,11 @@ package android.cybrilla.com.callernotestest;
         import java.util.LinkedList;
         import java.util.Queue;
 
+        import android.cybrilla.com.callernotestest.R;
+        import android.cybrilla.com.callernotestest.StandOutWindow;
         import android.cybrilla.com.callernotestest.StandOutWindow.StandOutLayoutParams;
-
+        import android.cybrilla.com.callernotestest.Utils;
+        import android.cybrilla.com.callernotestest.StandOutFlags;
         import android.content.Context;
         import android.os.Bundle;
         import android.util.DisplayMetrics;
@@ -469,18 +472,18 @@ public class Window extends FrameLayout {
         });
 
         // resize
-        View corner = decorations.findViewById(R.id.corner);
-        corner.setOnTouchListener(new OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                // handle dragging to move
-                boolean consumed = mContext.onTouchHandleResize(id,
-                        Window.this, v, event);
-
-                return consumed;
-            }
-        });
+//        View corner = decorations.findViewById(R.id.corner);
+//        corner.setOnTouchListener(new OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                // handle dragging to move
+//                boolean consumed = mContext.onTouchHandleResize(id,
+//                        Window.this, v, event);
+//
+//                return consumed;
+//            }
+//        });
 
         // set window appearance and behavior based on flags
         if (Utils.isSet(flags, StandOutFlags.FLAG_WINDOW_HIDE_ENABLE)) {
@@ -496,7 +499,7 @@ public class Window extends FrameLayout {
             titlebar.setOnTouchListener(null);
         }
         if (Utils.isSet(flags, StandOutFlags.FLAG_DECORATION_RESIZE_DISABLE)) {
-            corner.setVisibility(View.GONE);
+//            corner.setVisibility(View.GONE);
         }
 
         return decorations;
@@ -519,20 +522,20 @@ public class Window extends FrameLayout {
         // corner for resize
         if (!Utils.isSet(flags,
                 StandOutFlags.FLAG_ADD_FUNCTIONALITY_RESIZE_DISABLE)) {
-            View corner = root.findViewById(R.id.corner);
-            if (corner != null) {
-                corner.setOnTouchListener(new OnTouchListener() {
-
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        // handle dragging to move
-                        boolean consumed = mContext.onTouchHandleResize(id,
-                                Window.this, v, event);
-
-                        return consumed;
-                    }
-                });
-            }
+//            View corner = root.findViewById(R.id.corner);
+//            if (corner != null) {
+//                corner.setOnTouchListener(new OnTouchListener() {
+//
+//                    @Override
+//                    public boolean onTouch(View v, MotionEvent event) {
+//                        // handle dragging to move
+//                        boolean consumed = mContext.onTouchHandleResize(id,
+//                                Window.this, v, event);
+//
+//                        return consumed;
+//                    }
+//                });
+//            }
         }
 
         // window_icon for drop down

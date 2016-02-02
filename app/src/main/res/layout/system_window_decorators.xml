@@ -17,8 +17,8 @@
 
         <ImageView
             android:id="@+id/window_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:contentDescription="window icon"
             android:src="@mipmap/ic_launcher"/>
 
@@ -49,8 +49,8 @@
 
         <ImageView
             android:id="@+id/close"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
             android:background="@drawable/close"
             android:contentDescription="close" />
     </LinearLayout>
@@ -62,12 +62,12 @@
         android:layout_below="@+id/titlebar" >
     </FrameLayout>
 
-    <ImageView
-        android:id="@+id/corner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:contentDescription="corner" />
+    <!--<ImageView-->
+        <!--android:id="@+id/corner"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:contentDescription="corner" />-->
 
 </RelativeLayout>

@@ -10,20 +10,18 @@ import java.util.List;
 import java.util.Set;
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.cybrilla.com.callernotestest.StandOutFlags;
-import android.cybrilla.com.callernotestest.Window;
-     import android.app.PendingIntent;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-            import android.graphics.drawable.Drawable;
-            import android.net.Uri;
-            import android.os.Bundle;
-            import android.os.IBinder;
-            import android.util.Log;
-            import android.view.Display;
-            import android.view.Gravity;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.IBinder;
+import android.util.Log;
+import android.view.Display;
+import android.view.Gravity;
             import android.view.KeyEvent;
             import android.view.LayoutInflater;
             import android.view.MotionEvent;
@@ -40,14 +38,6 @@ import android.graphics.PixelFormat;
             import android.widget.PopupWindow;
             import android.widget.TextView;
 
-/**
- * Extend this class to easily create and manage floating StandOut windows.
- *
- * @author Mark Wei <markwei@gmail.com>
- *
- *         Contributors: Jason <github.com/jasonconnery>
- *
- */
 public abstract class StandOutWindow extends Service {
     static final String TAG = "StandOutWindow";
 
@@ -117,8 +107,7 @@ public abstract class StandOutWindow extends Service {
      *
      * @see #show(int)
      */
-    public static void show(Context context,
-                            Class<? extends StandOutWindow> cls, int id) {
+    public static void show(Context context, Class<? extends StandOutWindow> cls, int id) {
         context.startService(getShowIntent(context, cls, id));
     }
 
@@ -180,7 +169,7 @@ public abstract class StandOutWindow extends Service {
      * other.
      *
      * <p>
-     * Send {@link Parceleable} data in a {@link Bundle} to a new or existing
+     * Send {@link } data in a {@link Bundle} to a new or existing
      * windows. The implementation of the recipient window can handle what to do
      * with the data. To receive a result, provide the class and id of the
      * sender.
@@ -279,7 +268,7 @@ public abstract class StandOutWindow extends Service {
     }
 
     /**
-     * See {@link #closeAll(Context, Class, int)}.
+     * See {@link #(Context, Class, int)}.
      *
      * @param context
      *            A Context of the application package implementing this class.
@@ -317,7 +306,7 @@ public abstract class StandOutWindow extends Service {
      * @param fromId
      *            If the sending window wants a result, provide the id of the
      *            sending window.
-     * @return An {@link Intnet} to use with
+     * @return An {@link} to use with
      *         {@link Context#startService(Intent)}.
      */
     public static Intent getSendDataIntent(Context context,

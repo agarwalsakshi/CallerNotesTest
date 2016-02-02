@@ -10,20 +10,14 @@
         android:orientation="vertical"
         android:padding="8dp" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Multie Window Example"
-            android:textColor="#ffffff"
-            android:textStyle="bold" />
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:hint="Save your notes here"
+            android:id="@+id/notes" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Click notification to close."
-            android:textColor="#ffffff" />
     </LinearLayout>
 
 
