@@ -32,8 +32,7 @@ public class StandOutFlags {
      * <p>
      * This flag also sets {@link #FLAG_DECORATION_SYSTEM}.
      */
-    public static final int FLAG_DECORATION_CLOSE_DISABLE = FLAG_DECORATION_SYSTEM
-            | 1 << flag_bit++;
+    public static final int FLAG_DECORATION_CLOSE_DISABLE = FLAG_DECORATION_SYSTEM | 1 << flag_bit++;
 
     /**
      * Setting this flag indicates that the window decorator should NOT provide
@@ -42,8 +41,7 @@ public class StandOutFlags {
      * <p>
      * This flag also sets {@link #FLAG_DECORATION_SYSTEM}.
      */
-    public static final int FLAG_DECORATION_RESIZE_DISABLE = FLAG_DECORATION_SYSTEM
-            | 1 << flag_bit++;
+    public static final int FLAG_DECORATION_RESIZE_DISABLE = FLAG_DECORATION_SYSTEM | 1 << flag_bit++;
 
     /**
      * Setting this flag indicates that the window decorator should NOT provide
@@ -52,8 +50,7 @@ public class StandOutFlags {
      * <p>
      * This flag also sets {@link #FLAG_DECORATION_SYSTEM}.
      */
-    public static final int FLAG_DECORATION_MAXIMIZE_DISABLE = FLAG_DECORATION_SYSTEM
-            | 1 << flag_bit++;
+    public static final int FLAG_DECORATION_MAXIMIZE_DISABLE = FLAG_DECORATION_SYSTEM | 1 << flag_bit++;
 
     /**
      * Setting this flag indicates that the window decorator should NOT provide
@@ -62,8 +59,7 @@ public class StandOutFlags {
      * <p>
      * This flag also sets {@link #FLAG_DECORATION_SYSTEM}.
      */
-    public static final int FLAG_DECORATION_MOVE_DISABLE = FLAG_DECORATION_SYSTEM
-            | 1 << flag_bit++;
+    public static final int FLAG_DECORATION_MOVE_DISABLE = FLAG_DECORATION_SYSTEM | 1 << flag_bit++;
 
     /**
      * Setting this flag indicates that the window can be moved by dragging the
